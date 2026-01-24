@@ -8,7 +8,7 @@
 | Resource | Link |
 |----------|------|
 | **Presentation** | <a href="https://jabuelouf.github.io/us_traffic_cap/" target="_blank">View Presentation</a> |
-| **Interactive Dashboard** | <a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/TrafficAnalysisDashboard" target="_blank">View on Tableau Public</a> |
+| **Interactive Dashboard** | <a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/USTrafficAccidentAnalysis" target="_blank">View on Tableau Public</a> |
 | **Run the Analysis** | <a href="https://colab.research.google.com/github/jabuelouf/US_Traffic_Cap/blob/main/US_Traffic_Accident_Analysis.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> |
 
 ---
@@ -42,7 +42,7 @@ The Department of Transportation (DOT) needs data-driven guidance to reduce traf
 ### Interactive Dashboard
 Explore the data yourself with filters for time, weather, and location.
 
-<a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/TrafficAnalysisDashboard" target="_blank"><strong>Open Tableau Dashboard</strong></a>
+<a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/USTrafficAccidentAnalysis" target="_blank"><strong>Open Tableau Dashboard</strong></a>
 
 ### Full Analysis
 The complete Jupyter notebook with code, visualizations, and statistical analysis.
