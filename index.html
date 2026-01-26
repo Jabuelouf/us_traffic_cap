@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="US Traffic Accident Analysis: Data-Driven Insights for Road Safety - Department of Transportation">
+    <meta name="author" content="Department of Transportation">
+
+    <title>US Traffic Accident Analysis | Department of Transportation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="presentation">
+
+        <!-- ========================================
+         SLIDE 1: Title
+         ======================================== -->
+        <div class="slide slide-title" id="slide-1">
+            <img src="assets/aerial-highway.jpg" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+
+            <h1 class="slide-title-text" data-animate="fadeIn">US Traffic Accident Analysis</h1>
+            <p class="slide-subtitle" data-animate="fadeIn" data-delay="200">Data-Driven Insights for Road Safety</p>
+
+            <div class="slide-footer">
+                <span>Department of Transportation</span>
+                <span>January 2026</span>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 2: Data Overview
+         ======================================== -->
+        <div class="slide slide-content" id="slide-2">
+            <div class="data-overview-content">
+                <div class="big-stat" data-animate="scaleIn">
+                    <span class="stat-number" data-countup="7728394">0</span>
+                    <span class="stat-label">Total Accident Records Analyzed</span>
+                </div>
+
+                <p class="overview-text" data-animate="slideUp" data-delay="300">
+                    This comprehensive dataset encompasses over <strong>7.7 million</strong> traffic accidents
+                    from <strong>49 states</strong>, providing vital insights into national road safety trends
+                    from <strong>2016 to 2023</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 3: Key Questions
+         ======================================== -->
+        <div class="slide slide-content" id="slide-3">
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Key Questions</h2>
+            </div>
+
+            <div class="questions-grid">
+                <div class="image-panel" data-animate="slideUp" data-delay="100">
+                    <img src="assets/longex-night-road.jpg" alt="Night highway">
+                    <div class="question-content-box">
+                        <h3>When do accidents occur?</h3>
+                        <p>This analysis examines hourly, daily, and seasonal accident patterns.</p>
+                    </div>
+                </div>
+
+                <div class="image-panel" data-animate="slideUp" data-delay="200">
+                    <img src="assets/rainy-road.jpg" alt="Rainy conditions">
+                    <div class="question-content-box">
+                        <h3>How does weather affect severity?</h3>
+                        <p>We examine how rain, snow, fog, and other conditions impact traffic disruption severity.</p>
+                    </div>
+                </div>
+
+                <div class="image-panel" data-animate="slideUp" data-delay="300">
+                    <img src="assets/crazy-traffic-jam.jpg" alt="Traffic congestion">
+                    <div class="question-content-box">
+                        <h3>Where are accidents concentrated?</h3>
+                        <p>Analysis reveals geographic hotspots for targeted intervention.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 4: Temporal Patterns
+         ======================================== -->
+        <div class="slide slide-content" id="slide-4">
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Temporal Patterns</h2>
+            </div>
+
+            <div class="chart-wrapper">
+                <div class="chart-section" data-animate="fadeIn" data-delay="200">
+                    <h3 class="chart-title">Hourly Accident Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-hourly"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-section" data-animate="fadeIn" data-delay="400">
+                    <h3 class="chart-title">Seasonal Accident Trends</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-monthly"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insights-row">
+                <div class="content-box highlight" data-animate="slideUp" data-delay="600"
+                    data-highlight-bars="2,3,6,7,8" data-chart="chart-hourly">
+                    <h4>Rush Hour Concentration</h4>
+                    <p>Morning and afternoon rush hours account for <strong>33.5%</strong> of all accidents,
+                        representing high-exposure windows for intervention.</p>
+                    <ul>
+                        <li>7-9 AM: Peak morning commute window</li>
+                        <li>3-6 PM: Peak afternoon commute window</li>
+                        <li>Combined: 2,588,624 accidents in peak hours (33.5% of total)</li>
+                    </ul>
+                    <p class="caveat">Note: This analysis shows when accidents occur, not crash risk per vehicle-mile.
+                        Higher accident counts during rush hours may reflect higher traffic volume rather than elevated
+                        risk.</p>
+                </div>
+
+                <div class="content-box highlight" data-animate="slideUp" data-delay="700" data-highlight-bars="0,10,11"
+                    data-chart="chart-monthly">
+                    <h4>Winter Holiday Spike</h4>
+                    <p>Winter months consistently show the highest accident volumes, with December peaking at
+                        <strong>758,783 incidents</strong> (64% higher than the summer low in July):</p>
+                    <ul>
+                        <li>December: 758,783 (9.8%)</li>
+                        <li>November: 695,612 (9.0%)</li>
+                        <li>January: 652,682 (8.5%)</li>
+                    </ul>
+                    <p class="insight-note">Holiday travel periods drive significant accident spikes requiring seasonal
+                        interventions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 5: Time-Based Enforcement
+         ======================================== -->
+        <div class="slide slide-content slide-recommendation" id="slide-5">
+            <img src="assets/night-road.jpg" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Time-Based Enforcement</h2>
+            </div>
+
+            <div class="slide-5-layout" data-animate="scaleIn" data-delay="300">
+                <div class="recommendation-box">
+                    <h4>Strategic Resource Deployment</h4>
+                    <p>Align patrol schedules and emergency response positioning with documented accident concentration
+                        periods identified in our temporal analysis.</p>
+
+                    <h4>Implementation Approach:</h4>
+                    <ul>
+                        <li>Pre-position response units at high-frequency corridors</li>
+                        <li>Coordinate with dispatch for faster deployment</li>
+                        <li>Target Fridays for enhanced coverage (peak day)</li>
+                    </ul>
+
+                    <p class="caveat">Rationale: Concentrating resources during high-volume periods improves
+                        cost-effectiveness regardless of per-vehicle risk rate.</p>
+                </div>
+
+                <div class="benchmark-section">
+                    <h4>FHWA Effectiveness Data</h4>
+                    <div class="benchmark-card">
+                        <span class="benchmark-stat">10-15%</span>
+                        <span class="benchmark-label">Crash reduction from increased patrol presence</span>
+                        <span class="benchmark-source">FHWA HSM Chapter 5</span>
+                    </div>
+                    <div class="benchmark-card">
+                        <span class="benchmark-stat">8-12 min</span>
+                        <span class="benchmark-label">Faster response with pre-positioned units</span>
+                        <span class="benchmark-source">NHTSA Response Time Studies</span>
+                    </div>
+                    <div class="benchmark-card">
+                        <span class="benchmark-stat">$4.6M</span>
+                        <span class="benchmark-label">Annual savings per 1% reduction (100k pop)</span>
+                        <span class="benchmark-source">FHWA Benefit-Cost Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 6: Weather & Severity
+         ======================================== -->
+        <div class="slide slide-content" id="slide-6">
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Weather & Traffic Impact Severity</h2>
+                <p class="definition-note">Severity Scale (per dataset): 1-4 rating where 1 = short traffic delay, 4 =
+                    long traffic delay. This measures congestion impact, not injury outcomes.</p>
+            </div>
+
+            <div class="chart-wrapper">
+                <div class="chart-section" data-animate="fadeIn" data-delay="200">
+                    <h3 class="chart-title">Severity Rate by Weather Condition</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-weather-severity"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-section" data-animate="fadeIn" data-delay="400">
+                    <h3 class="chart-title">Total Accidents by Weather Condition</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-weather-volume"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insights-row">
+                <div class="content-box highlight" data-animate="slideUp" data-delay="600" data-highlight-bars="0,2,6,3"
+                    data-chart="chart-weather-severity" data-reorder="true">
+                    <h4>Adverse vs. Fair Severity</h4>
+                    <p>Adverse weather conditions show higher severe rates than fair conditions:</p>
+                    <ul>
+                        <li><strong>Rain:</strong> 23.5% severe (highest)</li>
+                        <li><strong>Snow/Ice:</strong> 19.5% severe</li>
+                        <li><strong>Fog/Haze:</strong> 16.2% severe</li>
+                        <li><strong>Fair:</strong> 16.9% severe (baseline)</li>
+                    </ul>
+                    <p class="caveat">*Adverse group average: 21.16% vs Fair: 16.91% (Relative Risk: 1.252). Fog/Haze
+                        included in adverse grouping for warning system purposes despite lower severity.</p>
+                </div>
+
+                <div class="content-box highlight" data-animate="slideUp" data-delay="700" data-highlight-bars="0,1,2"
+                    data-chart="chart-weather-volume" data-reorder="false">
+                    <h4>Volume Distribution</h4>
+                    <p>Most accidents occur during good visibility conditions:</p>
+                    <ul>
+                        <li><strong>Fair:</strong> 3,405,216 (44.1%)</li>
+                        <li><strong>Cloudy:</strong> 3,163,750 (40.9%)</li>
+                        <li><strong>Rain:</strong> 544,945 (7.1%)</li>
+                    </ul>
+                    <p class="caveat">Fair and cloudy together account for 85% of all accidents. "Adverse" weather
+                        (Rain, Snow/Ice, Fog/Haze) represents only 12% of total volume but warrants targeted
+                        interventions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 7: Weather-Responsive Systems
+         ======================================== -->
+        <div class="slide slide-content slide-recommendation" id="slide-7">
+            <img src="assets/mountain-road.jpg" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Weather-Responsive Systems</h2>
+            </div>
+
+            <div class="slide-7-layout" data-animate="scaleIn" data-delay="300">
+                <div class="recommendation-box">
+                    <h4>Why Weather-Responsive Systems Work</h4>
+                    <p>Unlike fair-weather accidents, weather-related crashes are <strong>preventable through early
+                            warning</strong>:</p>
+                    <ul>
+                        <li>Drivers can reduce speed before conditions worsen</li>
+                        <li>Trips can be delayed until conditions improve</li>
+                        <li>Emergency resources can pre-position along corridors</li>
+                    </ul>
+
+                    <p>The higher severity rates during adverse conditions (documented in our weather analysis) make
+                        these interventions particularly impactful.</p>
+
+                    <p class="caveat">Cost-effectiveness note: Weather programs target conditions where behavioral
+                        interventions have proven effectiveness.</p>
+                </div>
+
+                <div class="implementation-example">
+                    <h4>RWIS Implementation Model</h4>
+                    <div class="impl-step">
+                        <span class="step-icon">1</span>
+                        <span class="step-text">Environmental sensors detect precipitation, temperature, road
+                            surface</span>
+                    </div>
+                    <div class="impl-step">
+                        <span class="step-icon">2</span>
+                        <span class="step-text">Data feeds to Traffic Management Center in real-time</span>
+                    </div>
+                    <div class="impl-step">
+                        <span class="step-icon">3</span>
+                        <span class="step-text">Dynamic Message Signs display speed advisories</span>
+                    </div>
+                    <div class="impl-step">
+                        <span class="step-icon">4</span>
+                        <span class="step-text">Variable Speed Limits adjust based on conditions</span>
+                    </div>
+                    <div class="impl-benchmark">
+                        <strong>Proven:</strong> 5-15% reduction in weather-related crashes<br>
+                        <span class="benchmark-source">FHWA RWIS Benefit-Cost Study, 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 8: Geographic Concentration
+         ======================================== -->
+        <div class="slide slide-content" id="slide-8">
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Geographic Concentration</h2>
+            </div>
+
+            <div class="chart-wrapper">
+                <div class="chart-section" data-animate="fadeIn" data-delay="200">
+                    <h3 class="chart-title">Top 10 States by Accident Volume</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-states"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-section" data-animate="fadeIn" data-delay="400">
+                    <h3 class="chart-title">Top 10 Cities by Accident Volume</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-cities"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insights-row">
+                <div class="content-box highlight" data-animate="slideUp" data-delay="600"
+                    data-highlight-bars="0,1,2,3,4" data-chart="chart-states">
+                    <h4>State Concentration</h4>
+                    <p>The top 5 states alone account for <strong>3,934,979 accidents</strong> (50.9% of total):</p>
+                    <ul>
+                        <li>California (22.5%)</li>
+                        <li>Florida (11.4%)</li>
+                        <li>Texas (7.5%)</li>
+                        <li>South Carolina (5.0%)</li>
+                        <li>New York (4.5%)</li>
+                    </ul>
+                </div>
+
+                <div class="content-box highlight" data-animate="slideUp" data-delay="700" data-highlight-bars="0,1,2"
+                    data-chart="chart-cities">
+                    <h4>Urban Hotspots</h4>
+                    <p>The top 3 cities alone account for <strong>512,687 accidents</strong> (6.6% of total):</p>
+                    <ul>
+                        <li>Miami, FL (2.4%)</li>
+                        <li>Houston, TX (2.2%)</li>
+                        <li>Los Angeles, CA (2.0%)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="caveat" data-animate="fadeIn" data-delay="800">Data Source Note: Accident data is aggregated from
+                streaming traffic APIs (state DOTs, law enforcement, traffic sensors). Coverage varies by state
+                reporting infrastructure. Geographic patterns should be validated against official DOT records before
+                major investment decisions.</p>
+        </div>
+
+        <!-- ========================================
+         SLIDE 9: Hotspot Investment
+         ======================================== -->
+        <div class="slide slide-content slide-recommendation" id="slide-9">
+            <img src="assets/swirly-night-roads.jpg" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Hotspot Investment</h2>
+            </div>
+
+            <div class="slide-9-content-wrapper">
+                <div class="slide-9-layout">
+                    <!-- Left: Stacked tier boxes -->
+                    <div class="tier-stack">
+                        <!-- TIER 1: State Infrastructure -->
+                        <div class="tier-box tier-1" data-animate="slideUp" data-delay="200">
+                            <div class="tier-header">
+                                <h3 class="tier-title">TIER 1: STATE INFRASTRUCTURE</h3>
+                                <p class="tier-states">California, Florida, Texas, South Carolina, New York (50.9% of
+                                    accidents)</p>
+                            </div>
+                            <div class="tier-content">
+                                <h4>Physical Improvements:</h4>
+                                <ul>
+                                    <li>Intersection safety engineering (500 high-risk locations)</li>
+                                    <li>Road Weather Information Systems (200-300 monitoring stations)</li>
+                                    <li>Drainage upgrades in flood-prone areas</li>
+                                    <li>High-visibility lane markers</li>
+                                </ul>
+                            </div>
+                            <div class="tier-metrics">
+                                <p><strong>Investment:</strong> $618M-$1.24B*</p>
+                                <p><strong>Federal Share:</strong> 90% (HSIP eligible)</p>
+                                <p><strong>Timeline:</strong> Years 1-7, phased rollout</p>
+                                <p><strong>Expected:</strong> 35,000-45,000 accidents prevented annually*</p>
+                                <p><strong>ROI:</strong> Benefits exceed costs 14:1*</p>
+                            </div>
+                        </div>
+
+                        <!-- TIER 2: Metro Operations -->
+                        <div class="tier-box tier-2" data-animate="slideUp" data-delay="400">
+                            <div class="tier-header">
+                                <h3 class="tier-title">TIER 2: METRO OPERATIONS</h3>
+                                <p class="tier-states">Miami, Houston, Los Angeles, Charlotte, Dallas (Top 5 urban
+                                    corridors)</p>
+                            </div>
+                            <div class="tier-content">
+                                <h4>Rapid Deployment Programs:</h4>
+                                <ul>
+                                    <li>Adaptive traffic control systems (500-1,000 intersections)</li>
+                                    <li>Real-time traffic monitoring</li>
+                                    <li>Dynamic message signs & alerts</li>
+                                    <li>Weather-responsive speed management</li>
+                                </ul>
+                            </div>
+                            <div class="tier-metrics">
+                                <p><strong>Investment:</strong> $88M-$221M*</p>
+                                <p><strong>Timeline:</strong> Years 1-5, pilot then scale</p>
+                                <p><strong>Expected:</strong> 58,000+ (rush hour) + 25,000-32,000 (weather) prevented*
+                                </p>
+                                <p><strong>ROI:</strong> Benefits exceed costs 20:1*</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive US Map -->
+                    <div class="map-container" data-animate="fadeIn" data-delay="300">
+                        <div id="us-map"></div>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <span class="legend-color tier-1-color"></span>
+                                <span>Tier 1: Critical (Top 3)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color tier-2-color"></span>
+                                <span>Tier 2: High (4-5)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color tier-3-color"></span>
+                                <span>Tier 3: Secondary</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color no-data-color"></span>
+                                <span>Insufficient Data</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color city-color"></span>
+                                <span>Top 5 Metros</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="tier-footnote">*Illustrative estimates based on FHWA HSIP unit costs and CMF effectiveness
+                    data. Actual costs require engineering studies. See notebook Section 5.3 for methodology.</p>
+            </div>
+
+        </div>
+
+        <!-- ========================================
+         SLIDE 10: Implementation Timeline
+         ======================================== -->
+        <div class="slide slide-content" id="slide-10">
+            <img src="assets/timeline-bg.png" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Implementation Timeline</h2>
+            </div>
+
+            <div class="timeline-container" id="timeline-container">
+                <!-- Timeline will be rendered by JavaScript -->
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 11: Key Takeaways
+         ======================================== -->
+        <div class="slide slide-content" id="slide-11">
+            <img src="assets/daytime-open-road.jpg" alt="" class="bg-image">
+            <div class="bg-overlay bg-overlay-gradient"></div>
+
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Recommendations Summary</h2>
+            </div>
+
+            <div class="takeaways-grid slide-11-action">
+                <!-- Card 1: Time-Based Enforcement -->
+                <div class="stat-card" data-animate="slideUp" data-delay="100">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <h4 class="stat-header">Time-Based Enforcement</h4>
+                    <p class="stat-number">Patrol Alignment</p>
+                    <p class="stat-description">Deploy resources during documented peak accident periods</p>
+                    <p class="stat-tagline">10-15% crash reduction potential</p>
+                </div>
+
+                <!-- Card 2: Weather Systems -->
+                <div class="stat-card" data-animate="slideUp" data-delay="150">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25" />
+                        <line x1="8" y1="16" x2="8" y2="20" />
+                        <line x1="12" y1="18" x2="12" y2="22" />
+                        <line x1="16" y1="16" x2="16" y2="20" />
+                    </svg>
+                    <h4 class="stat-header">Weather-Responsive Systems</h4>
+                    <p class="stat-number">RWIS Deployment</p>
+                    <p class="stat-description">Real-time warnings and dynamic speed management</p>
+                    <p class="stat-tagline">5-15% weather crash reduction</p>
+                </div>
+
+                <!-- Card 3: Infrastructure Investment -->
+                <div class="stat-card" data-animate="slideUp" data-delay="200">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <h4 class="stat-header">Hotspot Infrastructure</h4>
+                    <p class="stat-number">Tier 1 + Tier 2</p>
+                    <p class="stat-description">Targeted improvements in top 5 states and metro areas</p>
+                    <p class="stat-tagline">$706M-$1.46B investment</p>
+                </div>
+
+                <!-- Card 4: Expected Impact -->
+                <div class="stat-card" data-animate="slideUp" data-delay="250">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                    <h4 class="stat-header">Combined Impact</h4>
+                    <p class="stat-number">118,000+</p>
+                    <p class="stat-description">Accidents prevented annually (all programs)</p>
+                    <p class="stat-tagline">Based on FHWA effectiveness benchmarks*</p>
+                </div>
+
+                <!-- Card 5: Timeline -->
+                <div class="stat-card" data-animate="slideUp" data-delay="300">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    <h4 class="stat-header">Implementation</h4>
+                    <p class="stat-number">Years 1-7</p>
+                    <p class="stat-description">Phased rollout with quarterly effectiveness reviews</p>
+                    <p class="stat-tagline">Pilot, validate, scale methodology</p>
+                </div>
+
+                <!-- Card 6: ROI -->
+                <div class="stat-card" data-animate="slideUp" data-delay="350">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23" />
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                    <h4 class="stat-header">Return on Investment</h4>
+                    <p class="stat-number">14:1 to 20:1</p>
+                    <p class="stat-description">Benefits exceed costs across all tiers</p>
+                    <p class="stat-tagline">Per FHWA benefit-cost methodology*</p>
+                </div>
+            </div>
+
+            <div class="footnote-section" data-animate="fadeIn" data-delay="500">
+                <p>*Illustrative projections based on FHWA HSIP effectiveness data. See notebook Section 5.3 for
+                    methodology and assumptions.</p>
+            </div>
+        </div>
+
+        <!-- ========================================
+         SLIDE 12: Next Steps
+         ======================================== -->
+        <div class="slide slide-next-steps" id="slide-12">
+            <img src="assets/swirly-night-roads.jpg" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+
+            <div class="slide-header">
+                <h2 class="slide-title-text" data-animate="slideInLeft">Next Steps</h2>
+            </div>
+
+            <div class="next-steps-layout">
+                <!-- Top Row: Three Main Boxes -->
+                <div class="next-steps-top-row">
+                    <!-- Implementation Priorities -->
+                    <div class="content-box next-steps-box" data-animate="slideUp" data-delay="100">
+                        <h4>Implementation Priorities</h4>
+                        <p class="section-subtitle">Immediate Actions (Q1 2026)</p>
+                        <ul>
+                            <li>Secure HSIP funding for intersection safety audits</li>
+                            <li>Deploy RWIS monitoring systems in priority states</li>
+                            <li>Initiate traffic management system planning</li>
+                            <li>Establish baseline metrics across all programs</li>
+                        </ul>
+                    </div>
+
+                    <!-- Measurement Framework -->
+                    <div class="content-box next-steps-box" data-animate="slideUp" data-delay="200">
+                        <h4>Measurement Framework</h4>
+                        <p class="section-subtitle">Success Metrics</p>
+                        <ul>
+                            <li>Monthly accident counts by corridor and location</li>
+                            <li>Weather-specific accident rates and severity measures</li>
+                            <li>Junction accident frequency and characteristics</li>
+                            <li>Quarterly effectiveness reviews vs. control corridors</li>
+                        </ul>
+                    </div>
+
+                    <!-- Expected Outcomes -->
+                    <div class="content-box next-steps-box" data-animate="slideUp" data-delay="300">
+                        <h4>Expected Outcomes</h4>
+                        <p class="section-subtitle">Year 5 Targets (2030)</p>
+                        <ul>
+                            <li>20% aggregate accident reduction across all programs</li>
+                            <li>115,000+ accidents prevented annually</li>
+                            <li>Measurable severity improvements in high-risk conditions</li>
+                            <li>ROI validation and program expansion planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Contact Footer with Resources -->
+            <div class="contact-footer">
+                <div class="contact-divider-line"></div>
+                <div class="footer-content" data-animate="fadeIn">
+                    <div class="footer-contact">
+                        <p class="contact-label">EMAIL</p>
+                        <a href="mailto:Jonathan@Abuelouf.com" class="contact-email">Jonathan@Abuelouf.com</a>
+                    </div>
+                    <div class="footer-resources">
+                        <a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/USTrafficAccidentAnalysis"
+                            target="_blank" class="footer-resource-link" title="Tableau Dashboard">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="resource-icon">
+                                <path
+                                    d="M11.654 5.327v2.291h-2.27v1.136h2.27v2.345h1.178V8.754h2.236V7.618h-2.236V5.327h-1.178zm-5.654 4.29v1.79H3.673v.903H6v1.827h.941V12.31h2.27v-.903H6.94V9.617H6zm10.593.027v1.79h-2.236v.903h2.236v1.827h.968v-1.827h2.27v-.903h-2.27V9.644h-.968zM11.654 13.73v2.291h-2.27v1.136h2.27v2.345h1.178v-2.345h2.236v-1.136h-2.236V13.73h-1.178zM6 17.727v1.791H3.673v.902H6v1.854h.941V20.42h2.27v-.902H6.94v-1.791H6zm10.593 0v1.791h-2.236v.902h2.236v1.854h.968V20.42h2.27v-.902h-2.27v-1.791h-.968z" />
+                            </svg>
+                            <span>Tableau Dashboard</span>
+                        </a>
+                        <span class="footer-resource-divider"></span>
+                        <a href="https://github.com/Jabuelouf/us_traffic_cap" target="_blank"
+                            class="footer-resource-link" title="GitHub Repository">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="resource-icon">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            <span>Analysis</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.presentation -->
+
+    <!-- Navigation Controls -->
+    <div class="nav-control nav-control-left" id="nav-control-left">
+        <div class="nav-arrow nav-arrow-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </div>
+    </div>
+    <div class="nav-control nav-control-right" id="nav-control-right">
+        <div class="nav-arrow nav-arrow-right">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </div>
+    </div>
+    <div class="nav-control nav-control-top" id="nav-control-top">
+        <div class="nav-restart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 4v6h6M23 20v-6h-6" />
+                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Carousel -->
+    <div class="nav-carousel-container" id="nav-carousel-container">
+        <div class="nav-carousel-tab" id="nav-carousel-tab"></div>
+        <div class="nav-carousel" id="nav-carousel">
+            <div class="nav-carousel-thumbnails" id="nav-carousel-thumbnails">
+                <!-- Thumbnails will be generated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Tooltip (outside presentation for z-index) -->
+    <div id="map-tooltip" class="map-tooltip"></div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- Chart.js Datalabels Plugin -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+    <!-- D3.js and TopoJSON for interactive map -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+
+    <!-- Global Progress Line SVG -->
+    <svg id="progress-line" class="progress-line" aria-hidden="true" preserveAspectRatio="none">
+        <path id="progress-path" class="progress-path" />
+        <path id="progress-path-secondary" class="progress-path" />
+    </svg>
+
+    <!-- Wipe overlay divs for slide 12 transition -->
+    <div id="wipe-overlay-top" class="wipe-overlay wipe-overlay-top"></div>
+    <div id="wipe-overlay-bottom" class="wipe-overlay wipe-overlay-bottom"></div>
+
+    <!-- Fullscreen Notice -->
+    <div id="fullscreen-notice" class="fullscreen-notice">
+        <div class="fullscreen-notice-content">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="fullscreen-icon">
+                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+            </svg>
+            <div class="notice-text">
+                <span class="notice-title">Best viewed in Fullscreen</span>
+                <span class="notice-subtitle">For optimal visualization experience</span>
+            </div>
+            <button id="btn-go-fullscreen" class="btn-fullscreen">Go Fullscreen</button>
+            <button id="btn-dismiss-notice" class="btn-dismiss" aria-label="Dismiss">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Presentation Data & App -->
+    <script src="data.js?v=2"></script>
+    <script src="app.js?v=3"></script>
+
+    <!-- Interactive US Map -->
+    <script>
+        (function () {
+            var projection, tooltip;
+
+            // FIPS code to state abbreviation mapping (all 50 states + DC)
+            var fipsToState = {
+                '01': 'AL', '02': 'AK', '04': 'AZ', '05': 'AR', '06': 'CA',
+                '08': 'CO', '09': 'CT', '10': 'DE', '11': 'DC', '12': 'FL',
+                '13': 'GA', '15': 'HI', '16': 'ID', '17': 'IL', '18': 'IN',
+                '19': 'IA', '20': 'KS', '21': 'KY', '22': 'LA', '23': 'ME',
+                '24': 'MD', '25': 'MA', '26': 'MI', '27': 'MN', '28': 'MS',
+                '29': 'MO', '30': 'MT', '31': 'NE', '32': 'NV', '33': 'NH',
+                '34': 'NJ', '35': 'NM', '36': 'NY', '37': 'NC', '38': 'ND',
+                '39': 'OH', '40': 'OK', '41': 'OR', '42': 'PA', '44': 'RI',
+                '45': 'SC', '46': 'SD', '47': 'TN', '48': 'TX', '49': 'UT',
+                '50': 'VT', '51': 'VA', '53': 'WA', '54': 'WV', '55': 'WI',
+                '56': 'WY'
+            };
+
+            // State abbreviation to full name mapping
+            var stateNames = {
+                'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas', 'CA': 'California',
+                'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware', 'DC': 'District of Columbia', 'FL': 'Florida',
+                'GA': 'Georgia', 'HI': 'Hawaii', 'ID': 'Idaho', 'IL': 'Illinois', 'IN': 'Indiana',
+                'IA': 'Iowa', 'KS': 'Kansas', 'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine',
+                'MD': 'Maryland', 'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi',
+                'MO': 'Missouri', 'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada', 'NH': 'New Hampshire',
+                'NJ': 'New Jersey', 'NM': 'New Mexico', 'NY': 'New York', 'NC': 'North Carolina', 'ND': 'North Dakota',
+                'OH': 'Ohio', 'OK': 'Oklahoma', 'OR': 'Oregon', 'PA': 'Pennsylvania', 'RI': 'Rhode Island',
+                'SC': 'South Carolina', 'SD': 'South Dakota', 'TN': 'Tennessee', 'TX': 'Texas', 'UT': 'Utah',
+                'VT': 'Vermont', 'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia', 'WI': 'Wisconsin',
+                'WY': 'Wyoming'
+            };
+
+            // Complete state data from analysis (49 states with data)
+            var stateData = {
+                'CA': { accidents: 1741433, rank: 1, tier: 1, priority: 'CRITICAL', percentage: 22.53, timeline: 'Years 1-3' },
+                'FL': { accidents: 880192, rank: 2, tier: 1, priority: 'CRITICAL', percentage: 11.39, timeline: 'Years 1-3' },
+                'TX': { accidents: 582837, rank: 3, tier: 1, priority: 'CRITICAL', percentage: 7.54, timeline: 'Years 1-3' },
+                'SC': { accidents: 382557, rank: 4, tier: 2, priority: 'HIGH', percentage: 4.95, timeline: 'Years 3-5' },
+                'NY': { accidents: 347960, rank: 5, tier: 2, priority: 'HIGH', percentage: 4.50, timeline: 'Years 3-5' },
+                'NC': { accidents: 338199, rank: 6, tier: 3, priority: 'Secondary', percentage: 4.38, timeline: 'Year 7+' },
+                'VA': { accidents: 303301, rank: 7, tier: 3, priority: 'Secondary', percentage: 3.92, timeline: 'Year 7+' },
+                'PA': { accidents: 296620, rank: 8, tier: 3, priority: 'Secondary', percentage: 3.84, timeline: 'Year 7+' },
+                'MN': { accidents: 192084, rank: 9, tier: 3, priority: 'Secondary', percentage: 2.49, timeline: 'Year 7+' },
+                'OR': { accidents: 179660, rank: 10, tier: 3, priority: 'Secondary', percentage: 2.32, timeline: 'Year 7+' },
+                'AZ': { accidents: 170609, rank: 11, tier: 3, priority: 'Secondary', percentage: 2.21, timeline: 'Year 7+' },
+                'GA': { accidents: 169234, rank: 12, tier: 3, priority: 'Secondary', percentage: 2.19, timeline: 'Year 7+' },
+                'IL': { accidents: 168958, rank: 13, tier: 3, priority: 'Secondary', percentage: 2.19, timeline: 'Year 7+' },
+                'TN': { accidents: 167388, rank: 14, tier: 3, priority: 'Secondary', percentage: 2.17, timeline: 'Year 7+' },
+                'MI': { accidents: 162191, rank: 15, tier: 3, priority: 'Secondary', percentage: 2.10, timeline: 'Year 7+' },
+                'LA': { accidents: 149701, rank: 16, tier: 3, priority: 'Secondary', percentage: 1.94, timeline: 'Year 7+' },
+                'NJ': { accidents: 140719, rank: 17, tier: 3, priority: 'Secondary', percentage: 1.82, timeline: 'Year 7+' },
+                'MD': { accidents: 140417, rank: 18, tier: 3, priority: 'Secondary', percentage: 1.82, timeline: 'Year 7+' },
+                'OH': { accidents: 118115, rank: 19, tier: 3, priority: 'Secondary', percentage: 1.53, timeline: 'Year 7+' },
+                'WA': { accidents: 108221, rank: 20, tier: 3, priority: 'Secondary', percentage: 1.40, timeline: 'Year 7+' },
+                'AL': { accidents: 101044, rank: 21, tier: 3, priority: 'Secondary', percentage: 1.31, timeline: 'Year 7+' },
+                'UT': { accidents: 97079, rank: 22, tier: 3, priority: 'Secondary', percentage: 1.26, timeline: 'Year 7+' },
+                'CO': { accidents: 90885, rank: 23, tier: 3, priority: 'Secondary', percentage: 1.18, timeline: 'Year 7+' },
+                'OK': { accidents: 83647, rank: 24, tier: 3, priority: 'Secondary', percentage: 1.08, timeline: 'Year 7+' },
+                'MO': { accidents: 77323, rank: 25, tier: 3, priority: 'Secondary', percentage: 1.00, timeline: 'Year 7+' },
+                'CT': { accidents: 71005, rank: 26, tier: 3, priority: 'Secondary', percentage: 0.92, timeline: 'Year 7+' },
+                'IN': { accidents: 67224, rank: 27, tier: 3, priority: 'Secondary', percentage: 0.87, timeline: 'Year 7+' },
+                'MA': { accidents: 61996, rank: 28, tier: 3, priority: 'Secondary', percentage: 0.80, timeline: 'Year 7+' },
+                'WI': { accidents: 34688, rank: 29, tier: 3, priority: 'Secondary', percentage: 0.45, timeline: 'Year 7+' },
+                'KY': { accidents: 32254, rank: 30, tier: 3, priority: 'Secondary', percentage: 0.42, timeline: 'Year 7+' },
+                'NE': { accidents: 28870, rank: 31, tier: 3, priority: 'Secondary', percentage: 0.37, timeline: 'Year 7+' },
+                'MT': { accidents: 28496, rank: 32, tier: 3, priority: 'Secondary', percentage: 0.37, timeline: 'Year 7+' },
+                'IA': { accidents: 26307, rank: 33, tier: 3, priority: 'Secondary', percentage: 0.34, timeline: 'Year 7+' },
+                'AR': { accidents: 22780, rank: 34, tier: 3, priority: 'Secondary', percentage: 0.29, timeline: 'Year 7+' },
+                'NV': { accidents: 21665, rank: 35, tier: 3, priority: 'Secondary', percentage: 0.28, timeline: 'Year 7+' },
+                'KS': { accidents: 20992, rank: 36, tier: 3, priority: 'Secondary', percentage: 0.27, timeline: 'Year 7+' },
+                'DC': { accidents: 18630, rank: 37, tier: 3, priority: 'Secondary', percentage: 0.24, timeline: 'Year 7+' },
+                'RI': { accidents: 16971, rank: 38, tier: 3, priority: 'Secondary', percentage: 0.22, timeline: 'Year 7+' },
+                'MS': { accidents: 15181, rank: 39, tier: 3, priority: 'Secondary', percentage: 0.20, timeline: 'Year 7+' },
+                'DE': { accidents: 14097, rank: 40, tier: 3, priority: 'Secondary', percentage: 0.18, timeline: 'Year 7+' },
+                'WV': { accidents: 13793, rank: 41, tier: 3, priority: 'Secondary', percentage: 0.18, timeline: 'Year 7+' },
+                'ID': { accidents: 11376, rank: 42, tier: 3, priority: 'Secondary', percentage: 0.15, timeline: 'Year 7+' },
+                'NM': { accidents: 10325, rank: 43, tier: 3, priority: 'Secondary', percentage: 0.13, timeline: 'Year 7+' },
+                'NH': { accidents: 10213, rank: 44, tier: 3, priority: 'Secondary', percentage: 0.13, timeline: 'Year 7+' },
+                'WY': { accidents: 3757, rank: 45, tier: 3, priority: 'Secondary', percentage: 0.05, timeline: 'Year 7+' },
+                'ND': { accidents: 3487, rank: 46, tier: 3, priority: 'Secondary', percentage: 0.05, timeline: 'Year 7+' },
+                'ME': { accidents: 2698, rank: 47, tier: 3, priority: 'Secondary', percentage: 0.03, timeline: 'Year 7+' },
+                'VT': { accidents: 926, rank: 48, tier: 3, priority: 'Secondary', percentage: 0.01, timeline: 'Year 7+' },
+                'SD': { accidents: 289, rank: 49, tier: 3, priority: 'Secondary', percentage: 0.00, timeline: 'Year 7+' }
+            };
+
+            // City data for metro area markers
+            var cityData = {
+                miami: { name: 'Miami', state: 'FL', accidents: 186768, rank: 1, coords: [-80.1918, 25.7617], program: 'Adaptive traffic control' },
+                houston: { name: 'Houston', state: 'TX', accidents: 169428, rank: 2, coords: [-95.3698, 29.7604], program: 'Real-time monitoring' },
+                losAngeles: { name: 'Los Angeles', state: 'CA', accidents: 156491, rank: 3, coords: [-118.2437, 34.0522], program: 'Dynamic message signs' },
+                charlotte: { name: 'Charlotte', state: 'NC', accidents: 138345, rank: 4, coords: [-80.8431, 35.2271], program: 'Weather-responsive speed mgmt' },
+                dallas: { name: 'Dallas', state: 'TX', accidents: 130303, rank: 5, coords: [-96.7970, 32.7767], program: 'Adaptive traffic control' }
+            };
+
+            // Investment allocation calculation (proportional to accidents within tier)
+            function getInvestmentRange(stateCode, data) {
+                if (!data) return 'N/A';
+                if (data.tier === 1) {
+                    // Tier 1 total: $618M-$1.24B for 3 states
+                    var tier1Total = stateData['CA'].accidents + stateData['FL'].accidents + stateData['TX'].accidents;
+                    var share = data.accidents / tier1Total;
+                    var lowInvest = Math.round(618 * share);
+                    var highInvest = Math.round(1240 * share);
+                    return '$' + lowInvest + 'M-$' + highInvest + 'M (Tier 1 allocation)';
+                } else if (data.tier === 2) {
+                    // Tier 2 states get smaller allocation from the same pool
+                    var tier2Total = stateData['SC'].accidents + stateData['NY'].accidents;
+                    var share = data.accidents / tier2Total;
+                    var lowInvest = Math.round(100 * share);
+                    var highInvest = Math.round(200 * share);
+                    return '$' + lowInvest + 'M-$' + highInvest + 'M (Tier 2 allocation)';
+                }
+                return 'Future funding pending Tier 1-2 results';
+            }
+
+            window.addEventListener('load', function () {
+                setTimeout(initUSMap, 800);
+            });
+
+            function initUSMap() {
+                var container = document.getElementById('us-map');
+                tooltip = document.getElementById('map-tooltip');
+
+                if (!container || typeof d3 === 'undefined') {
+                    console.error('Map container or D3 not found');
+                    return;
+                }
+
+                // Prevent duplicate map creation
+                if (container.querySelector('svg')) {
+                    console.log('Map SVG already exists, skipping initialization');
+                    return;
+                }
+
+                d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json')
+                    .then(function (us) {
+                        var svg = d3.select(container)
+                            .append('svg')
+                            .attr('width', '100%')
+                            .attr('height', '950')
+                            .attr('viewBox', '0 0 960 600');
+
+                        projection = d3.geoAlbersUsa()
+                            .scale(1000)
+                            .translate([480, 300]);
+
+                        var path = d3.geoPath().projection(projection);
+                        var states = topojson.feature(us, us.objects.states).features;
+
+                        // Draw all states with tier-based classes
+                        svg.selectAll('path.state')
+                            .data(states)
+                            .enter()
+                            .append('path')
+                            .attr('class', function (d) {
+                                var fips = d.id.toString().padStart(2, '0');
+                                var stateCode = fipsToState[fips];
+                                var data = stateCode ? stateData[stateCode] : null;
+
+                                if (!data) return 'state no-data-state';
+                                if (data.tier === 1) return 'state tier-1-state';
+                                if (data.tier === 2) return 'state tier-2-state';
+                                return 'state tier-3-state';
+                            })
+                            .attr('d', path)
+                            .attr('data-fips', function (d) { return d.id.toString().padStart(2, '0'); })
+                            .attr('data-state', function (d) {
+                                var fips = d.id.toString().padStart(2, '0');
+                                return fipsToState[fips] || '';
+                            });
+
+                        // Add state labels (2-letter codes)
+                        // Custom label offsets for better positioning on small/oddly-shaped states
+                        var labelOffsets = {
+                            'FL': [28, 5], 'LA': [-5, 10], 'MI': [15, 20],
+                            'VT': [0, -5], 'HI': [0, 0], 'ID': [-5, 15], 'CA': [-10, 0],
+                            'WV': [-5, 0], 'VA': [10, 5], 'NC': [0, 5], 'SC': [0, 5],
+                            'GA': [0, 5], 'PA': [0, 0], 'NY': [0, 5]
+                        };
+
+                        // States with external labels (leader lines)
+                        var externalLabels = {
+                            'NH': { labelX: 895, labelY: 145 },
+                            'VT': { labelX: 895, labelY: 165 },
+                            'MA': { labelX: 895, labelY: 185 },
+                            'RI': { labelX: 895, labelY: 205 },
+                            'CT': { labelX: 895, labelY: 225 },
+                            'NJ': { labelX: 895, labelY: 260 },
+                            'DE': { labelX: 895, labelY: 280 },
+                            'MD': { labelX: 895, labelY: 300 },
+                            'DC': { labelX: 895, labelY: 320 }
+                        };
+
+                        var externalLabelStates = Object.keys(externalLabels);
+
+                        // Regular state labels (not external)
+                        svg.selectAll('text.state-label')
+                            .data(states)
+                            .enter()
+                            .append('text')
+                            .attr('class', 'state-label')
+                            .attr('x', function (d) {
+                                var centroid = path.centroid(d);
+                                var fips = d.id.toString().padStart(2, '0');
+                                var stateCode = fipsToState[fips];
+                                var offset = labelOffsets[stateCode] || [0, 0];
+                                return centroid[0] + offset[0];
+                            })
+                            .attr('y', function (d) {
+                                var centroid = path.centroid(d);
+                                var fips = d.id.toString().padStart(2, '0');
+                                var stateCode = fipsToState[fips];
+                                var offset = labelOffsets[stateCode] || [0, 0];
+                                return centroid[1] + offset[1];
+                            })
+                            .text(function (d) {
+                                var fips = d.id.toString().padStart(2, '0');
+                                var stateCode = fipsToState[fips];
+                                // Skip external label states
+                                if (externalLabelStates.indexOf(stateCode) !== -1) return '';
+                                return stateCode || '';
+                            })
+                            .style('display', function (d) {
+                                var centroid = path.centroid(d);
+                                var fips = d.id.toString().padStart(2, '0');
+                                var stateCode = fipsToState[fips];
+                                if (externalLabelStates.indexOf(stateCode) !== -1) return 'none';
+                                return (centroid[0] && centroid[1]) ? 'block' : 'none';
+                            });
+
+                        // Draw external labels with leader lines
+                        states.forEach(function (d) {
+                            var fips = d.id.toString().padStart(2, '0');
+                            var stateCode = fipsToState[fips];
+                            if (!stateCode || externalLabelStates.indexOf(stateCode) === -1) return;
+
+                            var centroid = path.centroid(d);
+                            if (!centroid[0] || !centroid[1]) return;
+
+                            var labelPos = externalLabels[stateCode];
+                            var data = stateData[stateCode];
+                            var tierClass = 'tier-3-label';
+                            if (data && data.tier === 1) tierClass = 'tier-1-label';
+                            else if (data && data.tier === 2) tierClass = 'tier-2-label';
+
+                            // Draw leader line
+                            svg.append('line')
+                                .attr('class', 'leader-line')
+                                .attr('x1', centroid[0])
+                                .attr('y1', centroid[1])
+                                .attr('x2', labelPos.labelX - 18)
+                                .attr('y2', labelPos.labelY);
+
+                            // Draw label background for better click area
+                            svg.append('rect')
+                                .attr('class', 'external-label-bg ' + tierClass)
+                                .attr('x', labelPos.labelX - 16)
+                                .attr('y', labelPos.labelY - 8)
+                                .attr('width', 28)
+                                .attr('height', 16)
+                                .attr('data-state', stateCode)
+                                .attr('rx', 3);
+
+                            // Draw external label
+                            svg.append('text')
+                                .attr('class', 'external-label')
+                                .attr('x', labelPos.labelX)
+                                .attr('y', labelPos.labelY)
+                                .attr('data-state', stateCode)
+                                .text(stateCode);
+                        });
+
+                        // Draw city markers (gold circles for top 5 metros)
+                        Object.keys(cityData).forEach(function (key) {
+                            var city = cityData[key];
+                            var coords = projection(city.coords);
+                            if (!coords) return;
+
+                            svg.append('circle')
+                                .attr('class', 'city-marker')
+                                .attr('cx', coords[0])
+                                .attr('cy', coords[1])
+                                .attr('r', 8)
+                                .attr('data-city', key);
+
+                            svg.append('text')
+                                .attr('class', 'city-label')
+                                .attr('x', coords[0])
+                                .attr('y', coords[1] - 12)
+                                .text(city.name);
+                        });
+
+                        // Attach event listeners after short delay
+                        setTimeout(attachEventListeners, 100);
+                    })
+                    .catch(function (err) {
+                        console.error('Map loading error:', err);
+                    });
+            }
+
+            function attachEventListeners() {
+                // Helper function to generate tooltip content for a state
+                function getStateTooltipContent(stateCode) {
+                    var data = stateCode ? stateData[stateCode] : null;
+                    var stateName = stateNames[stateCode] || 'Unknown';
+                    var content = '';
+
+                    if (!data) {
+                        content = '<div class="tooltip-title">' + stateName + '</div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Status:</span><span class="tooltip-value">Insufficient Data</span></div>' +
+                            '<div class="tooltip-note">Not included in current analysis (AK, HI)</div>';
+                    } else if (data.tier === 1 || data.tier === 2) {
+                        var priorityClass = data.priority === 'CRITICAL' ? 'priority-critical' : 'priority-high';
+                        var tierLabel = data.tier === 1 ? 'Tier 1' : 'Tier 2';
+                        content = '<div class="tooltip-title">' + stateName + '</div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Accidents:</span><span class="tooltip-value">' + data.accidents.toLocaleString() + '</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Rank:</span><span class="tooltip-value">#' + data.rank + ' nationally</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Priority:</span><span class="tooltip-value ' + priorityClass + '">' + data.priority + ' (' + tierLabel + ')</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Share:</span><span class="tooltip-value">' + data.percentage.toFixed(1) + '% of US total</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Timeline:</span><span class="tooltip-value">' + data.timeline + ' deployment</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Est. Investment:</span><span class="tooltip-value">' + getInvestmentRange(stateCode, data) + '</span></div>';
+                    } else {
+                        content = '<div class="tooltip-title">' + stateName + '</div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Accidents:</span><span class="tooltip-value">' + data.accidents.toLocaleString() + '</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Rank:</span><span class="tooltip-value">#' + data.rank + ' nationally</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Priority:</span><span class="tooltip-value priority-secondary">Secondary</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Share:</span><span class="tooltip-value">' + data.percentage.toFixed(2) + '% of US total</span></div>' +
+                            '<div class="tooltip-note">Future expansion based on Tier 1-2 results</div>';
+                    }
+                    return content;
+                }
+
+                // All state elements
+                var allStates = document.querySelectorAll('.state');
+
+                allStates.forEach(function (el) {
+                    el.addEventListener('mouseenter', function (e) {
+                        var stateCode = el.getAttribute('data-state');
+                        showTooltip(e, getStateTooltipContent(stateCode));
+                    });
+                    el.addEventListener('mousemove', moveTooltip);
+                    el.addEventListener('mouseleave', hideTooltip);
+                });
+
+                // External label backgrounds (for small northeastern states)
+                var externalLabelBgs = document.querySelectorAll('.external-label-bg');
+                externalLabelBgs.forEach(function (el) {
+                    el.addEventListener('mouseenter', function (e) {
+                        var stateCode = el.getAttribute('data-state');
+                        showTooltip(e, getStateTooltipContent(stateCode));
+                    });
+                    el.addEventListener('mousemove', moveTooltip);
+                    el.addEventListener('mouseleave', hideTooltip);
+                });
+
+                // City markers
+                var cityEls = document.querySelectorAll('.city-marker');
+                cityEls.forEach(function (el) {
+                    el.addEventListener('mouseenter', function (e) {
+                        var cityKey = el.getAttribute('data-city');
+                        var city = cityData[cityKey];
+                        if (!city) return;
+
+                        var content = '<div class="tooltip-title">' + city.name + ', ' + city.state + '</div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Accidents:</span><span class="tooltip-value">' + city.accidents.toLocaleString() + '</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Rank:</span><span class="tooltip-value">#' + city.rank + ' Metro Area</span></div>' +
+                            '<div class="tooltip-row"><span class="tooltip-label">Program:</span><span class="tooltip-value">' + city.program + '</span></div>' +
+                            '<div class="tooltip-note">Part of Tier 2 Metro Operations initiative</div>';
+
+                        showTooltip(e, content);
+                    });
+                    el.addEventListener('mousemove', moveTooltip);
+                    el.addEventListener('mouseleave', hideTooltip);
+                });
+            }
+
+            function showTooltip(e, content) {
+                tooltip = document.getElementById('map-tooltip');
+                if (!tooltip) return;
+                tooltip.innerHTML = content;
+                tooltip.style.display = 'block';
+                tooltip.style.opacity = '1';
+                moveTooltip(e);
+            }
+
+            function moveTooltip(e) {
+                tooltip = document.getElementById('map-tooltip');
+                if (!tooltip) return;
+                var rect = tooltip.getBoundingClientRect();
+                var x = e.clientX + 15;
+                var y = e.clientY + 15;
+                if (x + rect.width > window.innerWidth) x = e.clientX - rect.width - 15;
+                if (y + rect.height > window.innerHeight) y = e.clientY - rect.height - 15;
+                tooltip.style.left = x + 'px';
+                tooltip.style.top = y + 'px';
+            }
+
+            function hideTooltip() {
+                tooltip = document.getElementById('map-tooltip');
+                if (tooltip) {
+                    tooltip.style.opacity = '0';
+                    tooltip.style.display = 'none';
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>

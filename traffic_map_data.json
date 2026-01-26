@@ -1,0 +1,487 @@
+{
+  "states": [
+    {
+      "state": "CA",
+      "accidents": 1741433,
+      "rank": 1,
+      "tier": 1,
+      "priority": "CRITICAL",
+      "percentage": 22.53,
+      "timeline": "Years 1-3"
+    },
+    {
+      "state": "FL",
+      "accidents": 880192,
+      "rank": 2,
+      "tier": 1,
+      "priority": "CRITICAL",
+      "percentage": 11.39,
+      "timeline": "Years 1-3"
+    },
+    {
+      "state": "TX",
+      "accidents": 582837,
+      "rank": 3,
+      "tier": 1,
+      "priority": "CRITICAL",
+      "percentage": 7.54,
+      "timeline": "Years 1-3"
+    },
+    {
+      "state": "SC",
+      "accidents": 382557,
+      "rank": 4,
+      "tier": 2,
+      "priority": "HIGH",
+      "percentage": 4.95,
+      "timeline": "Years 3-5"
+    },
+    {
+      "state": "NY",
+      "accidents": 347960,
+      "rank": 5,
+      "tier": 2,
+      "priority": "HIGH",
+      "percentage": 4.5,
+      "timeline": "Years 3-5"
+    },
+    {
+      "state": "NC",
+      "accidents": 338199,
+      "rank": 6,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 4.38,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "VA",
+      "accidents": 303301,
+      "rank": 7,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 3.92,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "PA",
+      "accidents": 296620,
+      "rank": 8,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 3.84,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "MN",
+      "accidents": 192084,
+      "rank": 9,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 2.49,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "OR",
+      "accidents": 179660,
+      "rank": 10,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 2.32,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "AZ",
+      "accidents": 170609,
+      "rank": 11,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 2.21,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "GA",
+      "accidents": 169234,
+      "rank": 12,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 2.19,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "IL",
+      "accidents": 168958,
+      "rank": 13,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 2.19,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "TN",
+      "accidents": 167388,
+      "rank": 14,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 2.17,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "MI",
+      "accidents": 162191,
+      "rank": 15,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 2.1,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "LA",
+      "accidents": 149701,
+      "rank": 16,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.94,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "NJ",
+      "accidents": 140719,
+      "rank": 17,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.82,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "MD",
+      "accidents": 140417,
+      "rank": 18,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.82,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "OH",
+      "accidents": 118115,
+      "rank": 19,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.53,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "WA",
+      "accidents": 108221,
+      "rank": 20,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.4,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "AL",
+      "accidents": 101044,
+      "rank": 21,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.31,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "UT",
+      "accidents": 97079,
+      "rank": 22,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.26,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "CO",
+      "accidents": 90885,
+      "rank": 23,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.18,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "OK",
+      "accidents": 83647,
+      "rank": 24,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.08,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "MO",
+      "accidents": 77323,
+      "rank": 25,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 1.0,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "CT",
+      "accidents": 71005,
+      "rank": 26,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.92,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "IN",
+      "accidents": 67224,
+      "rank": 27,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.87,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "MA",
+      "accidents": 61996,
+      "rank": 28,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.8,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "WI",
+      "accidents": 34688,
+      "rank": 29,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.45,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "KY",
+      "accidents": 32254,
+      "rank": 30,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.42,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "NE",
+      "accidents": 28870,
+      "rank": 31,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.37,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "MT",
+      "accidents": 28496,
+      "rank": 32,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.37,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "IA",
+      "accidents": 26307,
+      "rank": 33,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.34,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "AR",
+      "accidents": 22780,
+      "rank": 34,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.29,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "NV",
+      "accidents": 21665,
+      "rank": 35,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.28,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "KS",
+      "accidents": 20992,
+      "rank": 36,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.27,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "DC",
+      "accidents": 18630,
+      "rank": 37,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.24,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "RI",
+      "accidents": 16971,
+      "rank": 38,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.22,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "MS",
+      "accidents": 15181,
+      "rank": 39,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.2,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "DE",
+      "accidents": 14097,
+      "rank": 40,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.18,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "WV",
+      "accidents": 13793,
+      "rank": 41,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.18,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "ID",
+      "accidents": 11376,
+      "rank": 42,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.15,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "NM",
+      "accidents": 10325,
+      "rank": 43,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.13,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "NH",
+      "accidents": 10213,
+      "rank": 44,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.13,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "WY",
+      "accidents": 3757,
+      "rank": 45,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.05,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "ND",
+      "accidents": 3487,
+      "rank": 46,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.05,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "ME",
+      "accidents": 2698,
+      "rank": 47,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.03,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "VT",
+      "accidents": 926,
+      "rank": 48,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.01,
+      "timeline": "Year 7+"
+    },
+    {
+      "state": "SD",
+      "accidents": 289,
+      "rank": 49,
+      "tier": 3,
+      "priority": "Secondary",
+      "percentage": 0.0,
+      "timeline": "Year 7+"
+    }
+  ],
+  "cities": [
+    {
+      "city": "Miami",
+      "state": "FL",
+      "accidents": 186917,
+      "rank": 1
+    },
+    {
+      "city": "Houston",
+      "state": "TX",
+      "accidents": 169609,
+      "rank": 2
+    },
+    {
+      "city": "Los Angeles",
+      "state": "CA",
+      "accidents": 156491,
+      "rank": 3
+    },
+    {
+      "city": "Charlotte",
+      "state": "NC",
+      "accidents": 138652,
+      "rank": 4
+    },
+    {
+      "city": "Dallas",
+      "state": "TX",
+      "accidents": 130939,
+      "rank": 5
+    }
+  ],
+  "metadata": {
+    "total_accidents": 7728394,
+    "total_states": 49,
+    "total_cities": 5,
+    "date_generated": "2026-01-21",
+    "dataset_years": "2016-2023",
+    "tier_1_states": 3,
+    "tier_2_states": 2,
+    "tier_3_states": 44
+  }
+}
