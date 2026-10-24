@@ -191,7 +191,10 @@ Prioritize road safety improvements in high-concentration areas.
 Data Science Capstone Project | January 2026
 
 ---
-
 ## License
 
-This project is for educational purposes. Dataset provided by Sobhan Moosavi via Kaggle.
+The original code, analysis, and project documentation in this repository are licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+**Data Attribution:** This project uses the [US Accidents dataset](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) by Sobhan Moosavi. The dataset is not included in this repository and remains subject to its original licensing and usage terms.
+
+This project was developed for educational purposes.
