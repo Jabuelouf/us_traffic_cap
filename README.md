@@ -10,7 +10,7 @@
 | :--- | :--- |
 | **Interactive Presentation** | <a href="https://jabuelouf.github.io/us_traffic_cap/" target="_blank">View Presentation</a> |
 | **Tableau Dashboard** | <a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/USTrafficAccidentAnalysis" target="_blank">View on Tableau Public</a> |
-| **Run Analysis in Colab** | <a href="https://colab.research.google.com/github/Jabuelouf/US_Traffic_Cap/blob/main/US_Traffic_Accident_Analysis.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> |
+| **Run Analysis in Colab** | <a href="https://colab.research.google.com/github/Jabuelouf/us_traffic_cap/blob/main/US_Traffic_Accident_Analysis.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> |
 
 ---
 
@@ -129,12 +129,15 @@ source .venv/bin/activate  # On Windows: .\.venv\Scripts\Activate.ps1
 # Install dependencies
 pip install -r requirements.txt
 
+# Optional: Download the 7.7M-row source dataset via Kaggle CLI
+kaggle datasets download -d sobhanmoosavi/us-accidents -p data/ --unzip
+
 # Launch the analysis notebook
 jupyter notebook US_Traffic_Accident_Analysis.ipynb
 ```
 
 Alternatively, run directly in your browser with zero local setup:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jabuelouf/US_Traffic_Cap/blob/main/US_Traffic_Accident_Analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jabuelouf/us_traffic_cap/blob/main/US_Traffic_Accident_Analysis.ipynb)
 
 ---
 
@@ -159,5 +162,3 @@ Portfolio: [www.jabuelouf.me](https://www.jabuelouf.me)
 The original code, analysis, and project documentation in this repository are licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 **Data Attribution:** This project uses the [US Accidents dataset](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) by Sobhan Moosavi. The dataset is not included in this repository and remains subject to its original licensing and usage terms.
-
-This project was developed for educational purposes.
