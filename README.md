@@ -1,196 +1,159 @@
 # US Traffic Accident Analysis
 
-
 ## Data-Driven Insights for Road Safety | Department of Transportation
+
+![US Traffic Accident Analysis Banner](Images/banner.jpg)
 
 ### Quick Links
 
 | Resource | Link |
-|----------|------|
-| **Presentation** | <a href="https://jabuelouf.github.io/us_traffic_cap/" target="_blank">View Presentation</a> |
-| **Interactive Dashboard** | <a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/USTrafficAccidentAnalysis" target="_blank">View on Tableau Public</a> |
-| **Run the Analysis** | <a href="https://colab.research.google.com/github/jabuelouf/US_Traffic_Cap/blob/main/US_Traffic_Accident_Analysis.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> |
+| :--- | :--- |
+| **Interactive Presentation** | <a href="https://jabuelouf.github.io/us_traffic_cap/" target="_blank">View Presentation</a> |
+| **Tableau Dashboard** | <a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/USTrafficAccidentAnalysis" target="_blank">View on Tableau Public</a> |
+| **Run Analysis in Colab** | <a href="https://colab.research.google.com/github/Jabuelouf/US_Traffic_Cap/blob/main/US_Traffic_Accident_Analysis.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> |
 
 ---
 
 ## Executive Summary
 
-Analysis of **7.7 million US traffic accidents** (2016-2023) reveals three actionable insights:
+Analysis of **7.7 million US traffic accidents** (2016-2023) reveals three actionable patterns for resource allocation and road safety intervention:
 
-| Finding | Key Statistic | Recommendation |
-|---------|---------------|----------------|
-| **Temporal Clustering** | Rush hours = 33.5% of accidents | Time-based enforcement (7-9 AM, 3-6 PM) |
-| **Weather Impact** | Rain shows 23.5% severe rate vs 16.9% fair | Weather-responsive warning systems |
-| **Geographic Concentration** | Top 5 states = 50.9% of accidents | Targeted infrastructure investment |
+| Finding | Key Statistic | Actionable Recommendation |
+| :--- | :--- | :--- |
+| **Temporal Clustering** | Rush hours account for 33.5% of accidents | Time-targeted patrol and incident response (7-9 AM, 3-6 PM) |
+| **Weather Impact** | Rain shows 23.5% severe disruption rate vs 16.9% fair | Weather-responsive dynamic warning and speed advisories |
+| **Geographic Hotspots** | Top 5 states represent 50.9% of all accidents | Corridor-targeted infrastructure safety investments |
 
 ---
 
 ## Project Overview
 
-The Department of Transportation (DOT) needs data-driven guidance to reduce traffic accidents. This analysis identifies **when**, **where**, and **under what conditions** accidents are most likely to occur and be severe.
-
-### Key Questions Answered
-
-1. **When** do accidents cluster? Peak hours, days, and seasons
-2. **What conditions** increase severity? Weather and environmental factors  
-3. **Where** should resources focus? Geographic hotspots
-
----
-
-## View the Results
-
-### Interactive Dashboard
-Explore the data yourself with filters for time, weather, and location.
-
-<a href="https://public.tableau.com/app/profile/jonathan8167/viz/US_Traffic_Cap/USTrafficAccidentAnalysis" target="_blank"><strong>Open Tableau Dashboard</strong></a>
-
-### Full Analysis
-The complete Jupyter notebook with code, visualizations, and statistical analysis.
-
-<a href="https://colab.research.google.com/github/Jabuelouf/US_Traffic_Cap/blob/main/US_Traffic_Accident_Analysis.ipynb" target="_blank"><strong>Open in Google Colab</strong></a> - No setup required, runs in browser
-
----
-
-## Running the Analysis
-
-### Option 1: Google Colab (Recommended)
-Click the "Open in Colab" badge above. The notebook includes code to download the dataset automatically.
-
-### Option 2: Local Setup
-
-#### Using pip (requirements.txt)
-```bash
-# Clone the repository
-git clone https://github.com/Jabuelouf/us_traffic_cap.git
-cd us_traffic_cap
-
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies from requirements.txt
-pip install -r requirements.txt
-
-# Download dataset from Kaggle
-# https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
-# Place US_Accidents_March23.csv in the Data/ folder
-
-# Run Jupyter
-jupyter notebook US_Traffic_Accident_Analysis.ipynb
-```
-
-#### Using conda (environment.yml) - Optional
-```bash
-# Clone the repository
-git clone https://github.com/Jabuelouf/us_traffic_cap.git
-cd us_traffic_cap
-
-# Create conda environment from environment.yml
-conda env create -f environment.yml
-
-# Activate the environment
-conda activate us_traffic_analysis
-
-# Download dataset from Kaggle
-# https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
-# Place US_Accidents_March23.csv in the Data/ folder
-
-# Run Jupyter
-jupyter notebook US_Traffic_Accident_Analysis.ipynb
-```
-
----
-
-## Data Source
-
-**US Accidents (March 2023)**  
-- **Records:** 7,728,394 accidents  
-- **Coverage:** 49 US states  
-- **Timeframe:** February 2016 - March 2023  
-- **Source:** <a href="https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents" target="_blank">Kaggle</a>
-
----
-
-## Methodology
-
-This analysis follows **CRISP-DM** (Cross-Industry Standard Process for Data Mining):
-
-1. **Business Understanding** - DOT's need for actionable safety insights
-2. **Data Understanding** - 7.7M records across 49 states
-3. **Data Preparation** - Feature engineering, cleaning, categorization
-4. **Analysis** - Statistical testing (Chi-square, Cramer's V, Relative Risk)
-5. **Evaluation** - Validated patterns with effect sizes
-6. **Deployment** - Dashboard, notebook, and presentation
+The Department of Transportation (DOT) requires data-driven guidance to optimize safety enforcement and infrastructure planning. This analysis investigates 7.7M accident records across the contiguous United States to determine:
+1. **When** incidents cluster across hours, weekdays, and seasonal commute windows.
+2. **What conditions** amplify accident severity and traffic disruption duration.
+3. **Where** safety interventions yield the highest return on operational investment.
 
 ---
 
 ## Key Findings
 
-### Temporal Patterns
-- **Peak Hours:** 7-9 AM and 3-6 PM account for 33.5% of accidents (2,588,624 accidents in peak hours)
-- **Peak Day:** Friday (peak day for accidents)
-- **Peak Month:** December (758,783 incidents, 9.8% of total)
+### 1. Temporal Patterns and Commute Windows
+- **Peak Commute Concentration:** Rush hours (7-9 AM and 3-6 PM across all days) account for **33.5% of all accidents** (2,588,624 incidents).
+- **Peak Incident Day:** Friday records the highest accident volume of any weekday.
+- **Seasonal Surge:** December represents the highest single accident month with 758,783 reported incidents (9.8% of total volume).
 
-### Weather Impact
-| Condition | Severe Rate |
-|-----------|-------------|
-| Rain | 23.5% |
-| Cloudy | 21.7% |
-| Snow/Ice | 19.5% |
-| Fair | 16.9% |
+![Temporal Patterns Analysis](Images/temporal_analysis.png)
 
-**Volume Distribution:** Fair (44.1%) and Cloudy (40.9%) together account for 85% of all accidents. Adverse weather (Rain, Snow/Ice, Fog/Haze) represents 12% of total volume but warrants targeted interventions.
+![Hourly Accident Distribution](Images/hourly_detailed.png)
 
-**Relative Risk:** Adverse weather = 1.252x higher severe rate than fair weather (Adverse group average: 21.16% vs Fair: 16.91%)
+### 2. Weather Conditions and Severity Impact
+While fair and cloudy conditions account for 85% of total baseline volume, adverse weather disproportionately elevates accident severity (measured by duration of traffic disruption):
 
-### Geographic Concentration
-| Rank | State | % of Total |
-|------|-------|------------|
-| 1 | California | 22.5% |
-| 2 | Florida | 11.4% |
-| 3 | Texas | 7.5% |
-| 4 | South Carolina | 5.0% |
-| 5 | New York | 4.5% |
+| Weather Condition | Severe Disruption Rate (%) | Relative Risk Factor |
+| :--- | :---: | :---: |
+| **Rain** | **23.5%** | 1.39x vs Fair |
+| **Cloudy** | 21.7% | 1.28x vs Fair |
+| **Snow / Ice** | 19.5% | 1.15x vs Fair |
+| **Fair (Baseline)** | 16.9% | 1.00x (Baseline) |
 
-**Top 5 States:** Account for 3,934,979 accidents (50.9% of total)
+Adverse weather conditions overall produce a **1.252x higher relative risk** of severe road disruption compared to baseline fair conditions (21.16% adverse average vs 16.91% fair).
 
-**Top 3 Cities:** Miami (186,768), Houston (169,428), Los Angeles (156,491) - Combined: 512,687 accidents (6.6% of total)
+![Weather Conditions Impact](Images/weather_analysis.png)
+
+### 3. Geographic Concentration and Metropolitan Hotspots
+Accidents are heavily concentrated in high-density transit corridors:
+- **Top 5 States:** California (22.5%), Florida (11.4%), Texas (7.5%), South Carolina (5.0%), and New York (4.5%) account for **50.9% of all accidents** (3,934,979 incidents).
+- **Top 3 Metropolitan Hotspots:** Miami (186,768), Houston (169,428), and Los Angeles (156,491) together account for 512,687 incidents.
+
+![State Level Accident Concentration](Images/state_analysis.png)
+
+![Top 10 Cities Accident Volume](Images/city_analysis.png)
 
 ---
 
 ## Recommendations
 
-### 1. Time-Based Enforcement Programs
-Deploy additional traffic patrol and safety messaging during peak accident windows.
-- **Target:** 7-9 AM and 3-6 PM weekdays
-- **Metric:** Accident count during target hours
+### 1. Time-Based Patrol and Incident Response
+Focus active patrol deployments and emergency clear crews during peak morning (7-9 AM) and evening (3-6 PM) corridors to reduce secondary incident risk.
+- **Target:** Weekday commute hours.
+- **Metric:** Mean clearance time and incident recurrence rate.
 
-### 2. Weather-Responsive Warning Systems  
-Activate dynamic message signs and speed advisories when high-risk conditions are forecasted.
-- **Target:** Rain, Snow/Ice conditions
-- **Metric:** Severe accident rate during adverse weather
+### 2. Automated Weather-Responsive Advisory Systems
+Deploy automated variable speed limits and advance message signs triggered by real-time precipitation sensors.
+- **Target:** Rain and icy transit bottlenecks.
+- **Metric:** Severe disruption rate during adverse weather events.
 
-### 3. Hotspot Infrastructure Investment
-Prioritize road safety improvements in high-concentration areas.
-- **Target:** CA, FL, TX metropolitan areas
-- **Metric:** Before/after accident counts
+### 3. High-Density Corridor Infrastructure Prioritization
+Target highway safety improvements, barrier upgrades, and sensor coverage on identified arterial corridors across California, Florida, and Texas.
+- **Target:** Top 10 metropolitan accident zones.
+- **Metric:** Year-over-year corridor accident count reduction.
 
 ---
 
-## Technologies
+## Methodology
 
-- **Python** - pandas, numpy, matplotlib, seaborn, scipy
-- **Tableau** - Interactive dashboard
-- **Jupyter** - Analysis notebook
+This project follows the **CRISP-DM** (Cross-Industry Standard Process for Data Mining) framework:
+1. **Business Understanding:** Translating DOT road safety mandates into empirical analytical objectives.
+2. **Data Understanding:** Ingestion and validation of 7,728,394 accident records across 49 US states.
+3. **Data Preparation:** Feature engineering, missing value imputation, timestamp normalization, and categorical bucketing.
+4. **Statistical Analysis:** Chi-square tests of independence, Cramer's V effect size calculations, and Relative Risk metrics.
+5. **Evaluation:** Verification of findings against statistical significance thresholds and domain logic.
+6. **Deployment:** Interactive Tableau dashboard, reproducible Google Colab notebook, and web presentation.
+
+---
+
+## Data Source
+
+**US Accidents Dataset (2016 - 2023)**
+- **Total Records:** 7,728,394 accidents
+- **Geographic Coverage:** 49 US states
+- **Timeframe:** February 2016 through March 2023
+- **Primary Source:** [Kaggle US Accidents Dataset](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents) by Sobhan Moosavi
+
+---
+
+## Local Setup & Quickstart
+
+### Prerequisites
+- Python 3.10+
+- Jupyter Notebook or JupyterLab
+
+```bash
+git clone https://github.com/Jabuelouf/us_traffic_cap.git
+cd us_traffic_cap
+
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .\.venv\Scripts\Activate.ps1
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the analysis notebook
+jupyter notebook US_Traffic_Accident_Analysis.ipynb
+```
+
+Alternatively, run directly in your browser with zero local setup:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Jabuelouf/US_Traffic_Cap/blob/main/US_Traffic_Accident_Analysis.ipynb)
+
+---
+
+## Tech Stack
+
+- **Data Processing & Analysis:** Python, Pandas, NumPy, SciPy
+- **Statistical Visualization:** Matplotlib, Seaborn
+- **Interactive Dashboard:** Tableau Public
+- **Environment Management:** Conda / Pip / Jupyter
 
 ---
 
 ## Author
 
-**Jonathan Abuelouf**  
-Data Science Capstone Project | January 2026
+**Jonathan Abuelouf**
+Portfolio: [www.jabuelouf.me](https://www.jabuelouf.me)
 
 ---
+
 ## License
 
 The original code, analysis, and project documentation in this repository are licensed under the MIT License. See [LICENSE](LICENSE) for details.
